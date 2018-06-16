@@ -10,6 +10,7 @@
 		473FCD7DA4CD255706F6B195 /* Pods_ToGoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69670654C016806C11BC4C0 /* Pods_ToGoList.framework */; };
 		89D127311DBD6EF04804A4D5 /* Pods_ToGoListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4ED74852B1B676726DCD5BF /* Pods_ToGoListTests.framework */; };
 		B786552B8925BC48FFC4C793 /* Pods_ToGoListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E0F5FC522B86EBA6F99442 /* Pods_ToGoListUITests.framework */; };
+		DB004E0420D57988003B5A0C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB004E0320D57988003B5A0C /* Models.swift */; };
 		DB24278320D1408F006DE89B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB24278220D1408F006DE89B /* GoogleService-Info.plist */; };
 		DB7C8F1520C5992D00347AAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7C8F1420C5992D00347AAE /* AppDelegate.swift */; };
 		DB7C8F1720C5992D00347AAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7C8F1620C5992D00347AAE /* ViewController.swift */; };
@@ -50,6 +51,7 @@
 		74F2035B81057C00D278937F /* Pods-ToGoListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToGoListTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToGoListTests/Pods-ToGoListTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A69670654C016806C11BC4C0 /* Pods_ToGoList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToGoList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5B48DFAA964113B6F3925F6 /* Pods-ToGoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToGoList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToGoList/Pods-ToGoList.debug.xcconfig"; sourceTree = "<group>"; };
+		DB004E0320D57988003B5A0C /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		DB24278220D1408F006DE89B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DB7C8F1120C5992D00347AAE /* ToGoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToGoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB7C8F1420C5992D00347AAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				DB9D3FD520D5503500C08650 /* RegisterViewController.swift */,
 				DB9D3FD920D55EB000C08650 /* ListViewController.swift */,
 				DB9D3FDB20D562A400C08650 /* NewListViewController.swift */,
+				DB004E0320D57988003B5A0C /* Models.swift */,
 			);
 			path = ToGoList;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				DB9D3FDC20D562A400C08650 /* NewListViewController.swift in Sources */,
 				DB9D3FDA20D55EB000C08650 /* ListViewController.swift in Sources */,
 				DB9D3FD620D5503500C08650 /* RegisterViewController.swift in Sources */,
+				DB004E0420D57988003B5A0C /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
