@@ -55,6 +55,10 @@ class NewListViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         if(!(titleTf.text?.isEmpty)! && !descriptionTv.text.isEmpty) {
             let list = List(name: titleTf.text!, description: descriptionTv.text!, place: pickedPlace!)
             ref.child(Auth.auth().currentUser!.uid).child("lists").child(list.name).setValue(list.toNSDictionary())
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let listViewController = storyboard.instantiateViewController(withIdentifier: "ListStoryboard") as! ListViewController
+            self.present(listViewController, animated: true, completion: nil)
         } else {
             
         }

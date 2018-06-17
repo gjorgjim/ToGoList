@@ -296,47 +296,79 @@
             <point key="canvasLocation" x="925.60000000000002" y="114.69265367316342"/>
         </scene>
         <!--List View Controller-->
-        <scene sceneID="1vg-Vs-X8K">
+        <scene sceneID="7Tm-xg-aAs">
             <objects>
-                <viewController restorationIdentifier="ListStoryboard" storyboardIdentifier="ListStoryboard" id="lph-hx-bJQ" customClass="ListViewController" customModule="ToGoList" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jMd-Ou-XZf">
+                <tableViewController restorationIdentifier="ListStoryboard" storyboardIdentifier="ListStoryboard" id="dLZ-RK-yyS" customClass="ListViewController" customModule="ToGoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="G5f-fw-n8h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOp-vm-a3q">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <items>
-                                    <navigationItem title="ToGo List" id="wBC-OG-Wz6">
-                                        <barButtonItem key="rightBarButtonItem" title="New List" id="4MB-2f-ndS">
-                                            <connections>
-                                                <action selector="onClickNewList:" destination="lph-hx-bJQ" id="LY8-nc-0SW"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A11-lg-iWc">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="A11-lg-iWc" firstAttribute="top" secondItem="cOp-vm-a3q" secondAttribute="bottom" id="063-Cz-3m6"/>
-                            <constraint firstItem="cOp-vm-a3q" firstAttribute="top" secondItem="jMd-Ou-XZf" secondAttribute="top" id="AYn-wg-9yP"/>
-                            <constraint firstItem="cOp-vm-a3q" firstAttribute="leading" secondItem="Rd9-di-vhp" secondAttribute="leading" id="CjW-Ox-6tC"/>
-                            <constraint firstItem="A11-lg-iWc" firstAttribute="top" secondItem="cOp-vm-a3q" secondAttribute="bottom" id="GBL-78-KE7"/>
-                            <constraint firstItem="A11-lg-iWc" firstAttribute="bottom" secondItem="Rd9-di-vhp" secondAttribute="bottom" id="OVj-TI-WoM"/>
-                            <constraint firstItem="A11-lg-iWc" firstAttribute="trailing" secondItem="Rd9-di-vhp" secondAttribute="trailing" id="ZOd-rF-k10"/>
-                            <constraint firstItem="cOp-vm-a3q" firstAttribute="trailing" secondItem="Rd9-di-vhp" secondAttribute="trailing" id="hMp-Ig-peU"/>
-                            <constraint firstItem="A11-lg-iWc" firstAttribute="leading" secondItem="Rd9-di-vhp" secondAttribute="leading" id="lMO-XD-G0k"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Rd9-di-vhp"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NTx-ta-IM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="vMl-Yc-2vb">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="ToGoList" id="2Ln-M0-q6d">
+                                    <barButtonItem key="rightBarButtonItem" title="New List" id="loA-1D-ydr">
+                                        <connections>
+                                            <action selector="onClickNewList:" destination="dLZ-RK-yyS" id="b6h-xE-rSz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="LabelCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListCell" rowHeight="59" id="4Ip-ZR-WRg" customClass="ListTableViewCell" customModule="ToGoList" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="59"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Ip-ZR-WRg" id="CLe-zc-S9z">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="58.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u40-Lu-YaE">
+                                            <rect key="frame" x="0.0" y="5.5" width="192" height="48"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="192" id="4Nd-jp-MGu"/>
+                                                <constraint firstAttribute="height" constant="48" id="nLM-SG-04Y"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="23"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJO-ZA-QWn">
+                                            <rect key="frame" x="200" y="5.5" width="175" height="48"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="175" id="77E-Fu-Xfz"/>
+                                                <constraint firstAttribute="height" constant="48" id="EpQ-Tk-5kG"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="u40-Lu-YaE" firstAttribute="leading" secondItem="CLe-zc-S9z" secondAttribute="leading" id="XX8-Dh-BfS"/>
+                                        <constraint firstItem="BJO-ZA-QWn" firstAttribute="leading" secondItem="u40-Lu-YaE" secondAttribute="trailing" constant="8" id="dN8-gJ-seD"/>
+                                        <constraint firstAttribute="trailing" secondItem="BJO-ZA-QWn" secondAttribute="trailing" id="th8-tH-8lz"/>
+                                        <constraint firstItem="BJO-ZA-QWn" firstAttribute="centerY" secondItem="CLe-zc-S9z" secondAttribute="centerY" id="uTg-wl-tTJ"/>
+                                        <constraint firstItem="u40-Lu-YaE" firstAttribute="centerY" secondItem="CLe-zc-S9z" secondAttribute="centerY" id="wie-bi-Ncn"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="LabelCell" label="LabelCell"/>
+                                <connections>
+                                    <outlet property="listNameLbl" destination="u40-Lu-YaE" id="fPP-cL-0iw"/>
+                                    <outlet property="listPlaceLbl" destination="BJO-ZA-QWn" id="bGu-zF-1rL"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dLZ-RK-yyS" id="ska-Le-cFL"/>
+                            <outlet property="delegate" destination="dLZ-RK-yyS" id="8Mp-dj-yCL"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3xb-EI-S2N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1695.2" y="114.69265367316342"/>
+            <point key="canvasLocation" x="1679.2" y="117.39130434782609"/>
         </scene>
         <!--New List View Controller-->
         <scene sceneID="rhg-gx-Tkm">
