@@ -30,9 +30,11 @@ class ListViewController: UITableViewController {
         _ = ref.child(Auth.auth().currentUser!.uid).child("lists").observe(DataEventType.childAdded, with: { (snapshot) in
             let value = snapshot.value as! NSDictionary
             let list = List(name: (value["name"] as? String)!, description: (value["description"] as? String)!,
-                            place: Place(title: (value["place"] as? String)!, latitude: 0, longitude: 0))
+                            place: Place(title: (value["place"] as? String)!, latitude: 0, longitude: 0),
+                            inNotificationCenter: (value["inNotificationCenter"] as? Bool)!)
             self.lists.append(list)
             self.tableView.reloadData()
+            //TODO: Set notifications based on location
         })
         
         // Do any additional setup after loading the view.
@@ -69,5 +71,13 @@ class ListViewController: UITableViewController {
         cell.listPlaceLbl?.text = list.place.title
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("List item clicked")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let currentListViewController = storyboard.instantiateViewController(withIdentifier: "CurrentListStoryboard") as! CurrentListViewController
+        currentListViewController.currentList = lists[indexPath.row]
+        self.present(currentListViewController, animated: true, completion: nil)
     }
 }

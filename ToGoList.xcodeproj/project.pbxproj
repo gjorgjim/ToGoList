@@ -12,6 +12,7 @@
 		B786552B8925BC48FFC4C793 /* Pods_ToGoListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E0F5FC522B86EBA6F99442 /* Pods_ToGoListUITests.framework */; };
 		DB004E0420D57988003B5A0C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB004E0320D57988003B5A0C /* Models.swift */; };
 		DB24278320D1408F006DE89B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB24278220D1408F006DE89B /* GoogleService-Info.plist */; };
+		DB4528AB20D7E14800290B01 /* CurrentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4528AA20D7E14800290B01 /* CurrentListViewController.swift */; };
 		DB7C8F1520C5992D00347AAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7C8F1420C5992D00347AAE /* AppDelegate.swift */; };
 		DB7C8F1720C5992D00347AAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7C8F1620C5992D00347AAE /* ViewController.swift */; };
 		DB7C8F1A20C5992D00347AAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB7C8F1820C5992D00347AAE /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		C5B48DFAA964113B6F3925F6 /* Pods-ToGoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToGoList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToGoList/Pods-ToGoList.debug.xcconfig"; sourceTree = "<group>"; };
 		DB004E0320D57988003B5A0C /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		DB24278220D1408F006DE89B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DB4528AA20D7E14800290B01 /* CurrentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentListViewController.swift; sourceTree = "<group>"; };
 		DB7C8F1120C5992D00347AAE /* ToGoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToGoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB7C8F1420C5992D00347AAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB7C8F1620C5992D00347AAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				DB9D3FD920D55EB000C08650 /* ListViewController.swift */,
 				DB9D3FDB20D562A400C08650 /* NewListViewController.swift */,
 				DB004E0320D57988003B5A0C /* Models.swift */,
+				DB4528AA20D7E14800290B01 /* CurrentListViewController.swift */,
 			);
 			path = ToGoList;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB4528AB20D7E14800290B01 /* CurrentListViewController.swift in Sources */,
 				DB7C8F1720C5992D00347AAE /* ViewController.swift in Sources */,
 				DB7C8F1520C5992D00347AAE /* AppDelegate.swift in Sources */,
 				DBDE091620D1463C00B8F4E2 /* Helper.swift in Sources */,

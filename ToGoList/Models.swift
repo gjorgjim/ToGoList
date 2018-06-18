@@ -33,18 +33,21 @@ class List {
     var name: String
     var description: String
     var place: Place
+    var inNotificationCenter: Bool
     
-    init(name: String, description: String, place: Place) {
+    init(name: String, description: String, place: Place, inNotificationCenter: Bool) {
         self.name = name
         self.description = description
         self.place = place
+        self.inNotificationCenter = inNotificationCenter
     }
     
     func toNSDictionary() -> NSDictionary {
         let list: NSDictionary = [
             "name": self.name,
             "description": self.description,
-            "place": self.place.title]
+            "place": self.place.title,
+            "inNotificationCenter": self.inNotificationCenter]
         
         return list
     }
