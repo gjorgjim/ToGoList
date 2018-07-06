@@ -35,6 +35,9 @@ class CurrentListViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var descriptionTv: UITextView!
     @IBOutlet weak var placePicker: UIPickerView!
     @IBOutlet weak var backIv: UIImageView!
+    @IBAction func onClickDoneList(_ sender: Any) {
+        currentList?.done = true
+    }
     @IBAction func onClickSaveList(_ sender: Any) {
         currentList?.name = titleTf.text!
         currentList?.description = descriptionTv.text

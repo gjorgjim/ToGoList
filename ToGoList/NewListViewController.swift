@@ -53,7 +53,7 @@ class NewListViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     @IBAction func onClickAddNewList(_ sender: Any) {
         if(!(titleTf.text?.isEmpty)! && !descriptionTv.text.isEmpty) {
-            let list = List(name: titleTf.text!, description: descriptionTv.text!, place: pickedPlace!, inNotificationCenter: false)
+            let list = List(name: titleTf.text!, description: descriptionTv.text!, place: pickedPlace!, inNotificationCenter: false, done: false)
             ref.child(Auth.auth().currentUser!.uid).child("lists").child(list.name).setValue(list.toNSDictionary())
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
