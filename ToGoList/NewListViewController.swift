@@ -45,7 +45,7 @@ class NewListViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             textField.placeholder = "Langitude"
         }
         alert.addAction(UIAlertAction(title: "Add", style: UIAlertActionStyle.default, handler: { (alertAction) in
-            let place = Place(title: alert.textFields![0].text!, latitude: Float(alert.textFields![1].text!)!, longitude: Float(alert.textFields![2].text!)!)
+            let place = Place(title: alert.textFields![0].text!, latitude: Double(alert.textFields![1].text!)!, longitude: Double(alert.textFields![2].text!)!)
             self.ref.child(Auth.auth().currentUser!.uid).child("places").child(place.title).setValue(place.toNSDictionary())
         }))
         alert.addAction(UIAlertAction(title: "Not now", style: UIAlertActionStyle.default, handler: nil))
@@ -72,12 +72,11 @@ class NewListViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         placePicker.dataSource = self
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(onClickBackArrow(tapGestureRecognizer:)))
-        backIv.isUserInteractionEnabled = true
         backIv.addGestureRecognizer(tapGestureRecognizer)
         
         _ = ref.child(Auth.auth().currentUser!.uid).child("places").observe(DataEventType.childAdded, with: { (snapshot) in
             let value = snapshot.value as! NSDictionary
-            let place = Place(title: (value["title"] as? String)!, latitude: (value["latitude"] as? Float)!, longitude: (value["longitude"] as? Float)!)
+            let place = Place(title: (value["title"] as? String)!, latitude: (value["latitude"] as? Double)!, longitude: (value["longitude"] as? Double)!)
             if(self.pickedPlace == nil) {
                 self.pickedPlace = place
             }

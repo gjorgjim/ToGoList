@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24B1348520F249040038EB81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24B1348420F249040038EB81 /* GoogleService-Info.plist */; };
+		24B1348820F249F80038EB81 /* Arrow-Back-3-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 24B1348620F249F70038EB81 /* Arrow-Back-3-icon.png */; };
+		24B1348920F249F80038EB81 /* Arrow-Back-3-icon-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 24B1348720F249F70038EB81 /* Arrow-Back-3-icon-blue.png */; };
 		473FCD7DA4CD255706F6B195 /* Pods_ToGoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69670654C016806C11BC4C0 /* Pods_ToGoList.framework */; };
 		89D127311DBD6EF04804A4D5 /* Pods_ToGoListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4ED74852B1B676726DCD5BF /* Pods_ToGoListTests.framework */; };
 		B786552B8925BC48FFC4C793 /* Pods_ToGoListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E0F5FC522B86EBA6F99442 /* Pods_ToGoListUITests.framework */; };
 		DB004E0420D57988003B5A0C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB004E0320D57988003B5A0C /* Models.swift */; };
-		DB24278320D1408F006DE89B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB24278220D1408F006DE89B /* GoogleService-Info.plist */; };
 		DB4528AB20D7E14800290B01 /* CurrentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4528AA20D7E14800290B01 /* CurrentListViewController.swift */; };
 		DB7C8F1520C5992D00347AAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7C8F1420C5992D00347AAE /* AppDelegate.swift */; };
 		DB7C8F1720C5992D00347AAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7C8F1620C5992D00347AAE /* ViewController.swift */; };
@@ -23,9 +25,7 @@
 		DB9D3FD620D5503500C08650 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9D3FD520D5503500C08650 /* RegisterViewController.swift */; };
 		DB9D3FDA20D55EB000C08650 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9D3FD920D55EB000C08650 /* ListViewController.swift */; };
 		DB9D3FDC20D562A400C08650 /* NewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9D3FDB20D562A400C08650 /* NewListViewController.swift */; };
-		DB9D3FDE20D56A4100C08650 /* Arrow-Back-3-icon-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = DB9D3FDD20D56A4100C08650 /* Arrow-Back-3-icon-blue.png */; };
 		DBDE091620D1463C00B8F4E2 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDE091520D1463C00B8F4E2 /* Helper.swift */; };
-		DBDE091820D157C700B8F4E2 /* Arrow-Back-3-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DBDE091720D157C700B8F4E2 /* Arrow-Back-3-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24B1348420F249040038EB81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		24B1348620F249F70038EB81 /* Arrow-Back-3-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow-Back-3-icon.png"; sourceTree = "<group>"; };
+		24B1348720F249F70038EB81 /* Arrow-Back-3-icon-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow-Back-3-icon-blue.png"; sourceTree = "<group>"; };
 		265B2788979C8B6FE40B25B7 /* Pods-ToGoListUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToGoListUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToGoListUITests/Pods-ToGoListUITests.release.xcconfig"; sourceTree = "<group>"; };
 		46E0F5FC522B86EBA6F99442 /* Pods_ToGoListUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToGoListUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C0589026244359CE04B04F0 /* Pods-ToGoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToGoList.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToGoList/Pods-ToGoList.release.xcconfig"; sourceTree = "<group>"; };
@@ -53,7 +56,6 @@
 		A69670654C016806C11BC4C0 /* Pods_ToGoList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToGoList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5B48DFAA964113B6F3925F6 /* Pods-ToGoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToGoList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToGoList/Pods-ToGoList.debug.xcconfig"; sourceTree = "<group>"; };
 		DB004E0320D57988003B5A0C /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		DB24278220D1408F006DE89B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DB4528AA20D7E14800290B01 /* CurrentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentListViewController.swift; sourceTree = "<group>"; };
 		DB7C8F1120C5992D00347AAE /* ToGoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToGoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB7C8F1420C5992D00347AAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,9 +73,7 @@
 		DB9D3FD520D5503500C08650 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DB9D3FD920D55EB000C08650 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		DB9D3FDB20D562A400C08650 /* NewListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewListViewController.swift; sourceTree = "<group>"; };
-		DB9D3FDD20D56A4100C08650 /* Arrow-Back-3-icon-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Arrow-Back-3-icon-blue.png"; path = "../../../../Downloads/Arrow-Back-3-icon-blue.png"; sourceTree = "<group>"; };
 		DBDE091520D1463C00B8F4E2 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		DBDE091720D157C700B8F4E2 /* Arrow-Back-3-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Arrow-Back-3-icon.png"; path = "../../../../Downloads/Arrow-Back-3-icon.png"; sourceTree = "<group>"; };
 		DEF7A34AF6C0D4EBE88025BC /* Pods-ToGoListUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToGoListUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToGoListUITests/Pods-ToGoListUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF956B7AD024FC18EDD004D0 /* Pods-ToGoListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToGoListTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToGoListTests/Pods-ToGoListTests.release.xcconfig"; sourceTree = "<group>"; };
 		F4ED74852B1B676726DCD5BF /* Pods_ToGoListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToGoListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,16 +145,16 @@
 		DB7C8F1320C5992D00347AAE /* ToGoList */ = {
 			isa = PBXGroup;
 			children = (
+				24B1348720F249F70038EB81 /* Arrow-Back-3-icon-blue.png */,
+				24B1348620F249F70038EB81 /* Arrow-Back-3-icon.png */,
+				24B1348420F249040038EB81 /* GoogleService-Info.plist */,
 				DB7C8F1420C5992D00347AAE /* AppDelegate.swift */,
 				DB7C8F1620C5992D00347AAE /* ViewController.swift */,
 				DB7C8F1820C5992D00347AAE /* Main.storyboard */,
 				DB7C8F1B20C5992D00347AAE /* Assets.xcassets */,
 				DB7C8F1D20C5992D00347AAE /* LaunchScreen.storyboard */,
 				DB7C8F2020C5992D00347AAE /* Info.plist */,
-				DB24278220D1408F006DE89B /* GoogleService-Info.plist */,
 				DBDE091520D1463C00B8F4E2 /* Helper.swift */,
-				DBDE091720D157C700B8F4E2 /* Arrow-Back-3-icon.png */,
-				DB9D3FDD20D56A4100C08650 /* Arrow-Back-3-icon-blue.png */,
 				DB9D3FD520D5503500C08650 /* RegisterViewController.swift */,
 				DB9D3FD920D55EB000C08650 /* ListViewController.swift */,
 				DB9D3FDB20D562A400C08650 /* NewListViewController.swift */,
@@ -304,11 +304,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB7C8F1F20C5992D00347AAE /* LaunchScreen.storyboard in Resources */,
-				DBDE091820D157C700B8F4E2 /* Arrow-Back-3-icon.png in Resources */,
+				24B1348920F249F80038EB81 /* Arrow-Back-3-icon-blue.png in Resources */,
 				DB7C8F1C20C5992D00347AAE /* Assets.xcassets in Resources */,
-				DB9D3FDE20D56A4100C08650 /* Arrow-Back-3-icon-blue.png in Resources */,
+				24B1348820F249F80038EB81 /* Arrow-Back-3-icon.png in Resources */,
 				DB7C8F1A20C5992D00347AAE /* Main.storyboard in Resources */,
-				DB24278320D1408F006DE89B /* GoogleService-Info.plist in Resources */,
+				24B1348520F249040038EB81 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +589,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S2YPU2BD58;
 				INFOPLIST_FILE = ToGoList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gjorgjim.ToGoList;
@@ -604,6 +605,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S2YPU2BD58;
 				INFOPLIST_FILE = ToGoList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gjorgjim.ToGoList;

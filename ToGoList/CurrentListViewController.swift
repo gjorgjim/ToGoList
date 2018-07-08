@@ -37,6 +37,10 @@ class CurrentListViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var backIv: UIImageView!
     @IBAction func onClickDoneList(_ sender: Any) {
         currentList?.done = true
+        ref.child((Auth.auth().currentUser?.uid)!).child("lists").child((currentList?.name)!).removeValue()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let listViewController = storyboard.instantiateViewController(withIdentifier: "ListStoryboard") as! ListViewController
+        self.present(listViewController, animated: true, completion: nil)
     }
     @IBAction func onClickSaveList(_ sender: Any) {
         currentList?.name = titleTf.text!
@@ -53,7 +57,6 @@ class CurrentListViewController: UIViewController, UIPickerViewDelegate, UIPicke
         ref = Database.database().reference()
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(onClickBackArrow(tapGestureRecognizer:)))
-        backIv.isUserInteractionEnabled = true
         backIv.addGestureRecognizer(tapGestureRecognizer)
         
         placeName = currentList!.name
@@ -67,7 +70,7 @@ class CurrentListViewController: UIViewController, UIPickerViewDelegate, UIPicke
         _ = ref.child(Auth.auth().currentUser!.uid).child("places").observe(DataEventType.childAdded, with: { (snapshot) in
             print("Child added called")
             let value = snapshot.value as! NSDictionary
-            let place = Place(title: (value["title"] as? String)!, latitude: (value["latitude"] as? Float)!, longitude: (value["longitude"] as? Float)!)
+            let place = Place(title: (value["title"] as? String)!, latitude: (value["latitude"] as? Double)!, longitude: (value["longitude"] as? Double)!)
             self.pickerData.append(place)
             self.placePicker.reloadAllComponents()
             if(self.pickedPlace?.title == place.title) {

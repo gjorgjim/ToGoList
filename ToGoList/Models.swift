@@ -10,10 +10,10 @@ import Foundation
 
 class Place {
     var title: String
-    var latitude: Float
-    var longitude: Float
+    var latitude: Double
+    var longitude: Double
     
-    init(title: String, latitude: Float, longitude: Float) {
+    init(title: String, latitude: Double, longitude: Double) {
         self.title = title
         self.latitude = latitude
         self.longitude = longitude

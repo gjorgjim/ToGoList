@@ -16,13 +16,13 @@ class ListTableViewCell: UITableViewCell {
     @IBOutlet weak var listPlaceLbl: UILabel!
 }
 
-class ListViewController: UITableViewController, UNUserNotificationCenterDelegate, CLLocationManagerDelegate {
+class ListViewController: UITableViewController, CLLocationManagerDelegate {
 
     let locationManager = CLLocationManager()
     let notificationCenter = UNUserNotificationCenter.current()
     
     var ref: DatabaseReference!
-    var lists: [List] = [List]()
+    var lists = [List]()
     @IBAction func onClickNewList(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let newListViewController = storyboard.instantiateViewController(withIdentifier: "NewListStoryboard") as! NewListViewController
@@ -32,12 +32,11 @@ class ListViewController: UITableViewController, UNUserNotificationCenterDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters // less batery ussage
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest // less batery ussage
         locationManager.pausesLocationUpdatesAutomatically = false
         locationManager.allowsBackgroundLocationUpdates = true
         locationManager.requestAlwaysAuthorization()
         locationManager.delegate = self
-        notificationCenter.delegate = self
         notificationCenter.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
             if granted {
                 print("NotificationCenter Authorization Granted!")
@@ -46,7 +45,7 @@ class ListViewController: UITableViewController, UNUserNotificationCenterDelegat
         locationManager.startUpdatingLocation()
         
         ref = Database.database().reference()
-        _ = ref.child(Auth.auth().currentUser!.uid).child("lists").observe(DataEventType.childAdded, with: { (snapshot) in
+        _ = ref.child(Auth.auth().currentUser!.uid).child("lists").observe(DataEventType.childAdded, with: { [unowned self] (snapshot) in
             let value = snapshot.value as! NSDictionary
             let list = List(name: (value["name"] as? String)!, description: (value["description"] as? String)!,
                             place: Place(title: (value["place"] as? String)!, latitude: 0, longitude: 0),
@@ -55,28 +54,24 @@ class ListViewController: UITableViewController, UNUserNotificationCenterDelegat
             self.lists.append(list)
             self.tableView.reloadData()
             if(!list.done && !list.inNotificationCenter) {
-                let center = UNUserNotificationCenter.current()
-                //center.removeAllPendingNotificationRequests() // deletes pending scheduled notifications, there is a schedule limit qty
-                
                 let content = UNMutableNotificationContent()
                 content.title = "ToGo List"
                 content.body = "You have a ToGo list in this area"
                 content.categoryIdentifier = "alarm"
                 content.sound = UNNotificationSound.default()
                 
-                // Ex. Trigger within a timeInterval
-                // let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
                 
                 // Ex. Trigger within a Location
                 let centerLoc = CLLocationCoordinate2D(latitude: Double(list.place.latitude), longitude: Double(list.place.longitude))
-                let region = CLCircularRegion(center: centerLoc, radius: 300.0, identifier: UUID().uuidString) // radius in meters
+                let region = CLCircularRegion(center: centerLoc, radius: 1.0, identifier: UUID().uuidString) // radius in meters
                 region.notifyOnEntry = true
                 region.notifyOnExit = false
                 let trigger = UNLocationNotificationTrigger(region: region, repeats: true)
-                
+//                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
                 let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-                center.add(request)
+                self.notificationCenter.add(request)
                 list.inNotificationCenter = true
+                self.ref.child((Auth.auth().currentUser?.uid)!).child("lists").child(list.name).child("inNotificationCenter").setValue(true)
             }
             //TODO: Set notifications based on location
         })

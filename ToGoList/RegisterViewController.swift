@@ -47,7 +47,6 @@ class RegisterViewController: UIViewController {
         repeatPasswordTf.underlined()
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(onClickBackArrow(tapGestureRecognizer:)))
-        backIv.isUserInteractionEnabled = true
         backIv.addGestureRecognizer(tapGestureRecognizer)
         // Do any additional setup after loading the view.
     }
