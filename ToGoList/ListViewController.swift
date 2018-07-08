@@ -23,6 +23,12 @@ class ListViewController: UITableViewController, CLLocationManagerDelegate {
     
     var ref: DatabaseReference!
     var lists = [List]()
+    @IBAction func onClickLogOut(_ sender: Any) {
+        try! Auth.auth().signOut()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "LoginStoryboard") as! ViewController
+        self.present(viewController, animated: true, completion: nil)
+    }
     @IBAction func onClickNewList(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let newListViewController = storyboard.instantiateViewController(withIdentifier: "NewListStoryboard") as! NewListViewController
